@@ -4,7 +4,7 @@ from coldtype.warping import warp_fn
 import noise
 
 # Load the designspace directly (no need for fonts)
-obvs = Font("ç/ColdtypeObviously.designspace")
+obvs = Font("fonts/ColdtypeObviously.designspace")
 
 # Load the MIDI before our render, since this won’t change between renders
 drums = MidiReader("examples/media/808.mid", duration=120, bpm=120)[0]
@@ -12,7 +12,7 @@ drums = MidiReader("examples/media/808.mid", duration=120, bpm=120)[0]
 # Load our logos ufo for branding-purposes
 # (N.B. here we are loading a defcon.Font directly, since the logos.ufo
 # isn’t really a font even in spirit)
-logos = raw_ufo("ç/logos.ufo")
+logos = raw_ufo("fonts/logos.ufo")
 
 
 @animation(duration=drums.duration, bg=0.2, storyboard=[56])

@@ -3,7 +3,7 @@ from coldtype import *
 # This font does not come w/ Coldtype — but it’s an incredibly cool font worth buying
 fatface = Font("≈/OhnoFatfaceVariable.ttf")
 
-@animation(timeline=Timeline(100, storyboard=[0]))
+@animation(timeline=Timeline(100, storyboard=[0]), bg=0.2)
 def render(f):
     at = f.a.progress(f.i, loops=1, easefn="eeio")
     c1, c2 = [r.inset(20, 5) for r in f.a.r.inset(0, 50).divide(0.15+at.e*0.7, "maxy")]
