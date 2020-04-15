@@ -7,7 +7,7 @@ import noise
 obvs = Font("fonts/ColdtypeObviously.designspace")
 
 # Load the MIDI before our render, since this won’t change between renders
-drums = MidiReader("examples/media/808.mid", duration=120, bpm=120)[0]
+drums = MidiReader("animations/media/808.mid", duration=120, bpm=120)[0]
 
 # Load our logos ufo for branding-purposes
 # (N.B. here we are loading a defcon.Font directly, since the logos.ufo
