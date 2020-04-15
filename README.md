@@ -51,7 +51,7 @@ For instance, with the above process still running, try typing—
 pf 30
 ```
 
-—and then hitting `enter` on your keyboard. This will show you a different frame (frame 30) of the animation. The `pf` command stands for `p`review `f`rame.
+—and then hitting `enter` on your keyboard. This will show you a different frame (frame 30) of the animation. The `pf` command stands for **p**review **f**rame.
 
 You can type any number of frame indices here, to preview multiple frames at once, like so:
 
@@ -59,7 +59,7 @@ You can type any number of frame indices here, to preview multiple frames at onc
 pf 35, 36, 37
 ```
 
-If you hit `ra`, this will `r`ender `a`ll, and should take a little while to complete, depending on how fast you’re computer is.
+If you hit `ra`, this will **r**ender **a**ll, and should take a little while to complete, depending on how fast you’re computer is.
 
 ```
 ra
