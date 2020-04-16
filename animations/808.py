@@ -11,7 +11,8 @@ drums = MidiReader("animations/media/808.mid", duration=120, bpm=120)[0]
 
 # Load our logos ufo for branding-purposes
 # (N.B. here we are loading a defcon.Font directly, since the logos.ufo
-# isn’t really a font even in spirit)
+# isn’t really a font even in spirit, it’s just a collection of outlines
+# keyed by some names)
 logos = raw_ufo("fonts/logos.ufo")
 
 
@@ -107,6 +108,8 @@ def render(f):
     ghz_logo.scale(0.2).align(f.a.r, y="mny").translate(0, 100).nonlinear_transform(warp_fn(speed=fp*3, rz=3, mult=10))
 
     # return both elements to the renderer
+    # color elements with rgb primitives so we can
+    # channel separate them in after effects later
     return [
         ghz_logo.f(1, 0, 0).skew(cowbell.ease()*1),
         pens.f(0, 1, 0).reversePens().understroke(s=(0, 0, 1), sw=15).translate(0, 100)
