@@ -1,6 +1,6 @@
 # Coldtype (Examples)
 
-## Preqrequisites
+## Prerequisites
 
 - Python 3.8 (or 3.7) — installable from https://www.python.org/
 - The Coldtype app — installable from https://coldtype.goodhertz.co
