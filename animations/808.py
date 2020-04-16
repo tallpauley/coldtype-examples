@@ -16,7 +16,7 @@ drums = MidiReader("animations/media/808.mid", duration=120, bpm=120)[0]
 logos = raw_ufo("fonts/logos.ufo")
 
 
-@animation(duration=drums.duration, bg=0.2, storyboard=[56])
+@animation(duration=drums.duration, bg=0.2, storyboard=[105])
 def render(f):
     # Get the kick and cowbell values b/c we’re going to use
     # these in the initial lockup
@@ -91,16 +91,16 @@ def render(f):
     elif hat.count == 5:
         def move_e_contour(idx, x, y):
             if 9 <= idx <= 13 or 20 <= idx <= 25:
-                x -= 50*hat.ease()
-            if 0 <= idx <= 33:
-                y -= 50*hat.ease()
+                x -= 75*hat.ease()
+            #if 0 <= idx <= 33:
+            #    y -= 50*hat.ease()
             return x, y
         pens[1].ffg("E").map_points(move_e_contour)#.translate(hat.ease()*150, 0)
 
     ### TOMTOM
     # And lastly, use the tom signal to push up the outside of the O in the first line
     tom = drums.fv(f.i, [50], [5, 10])
-    pens[0].ffg("O").mod_contour(0, lambda c: c.translate(0, -150*tom.ease()))
+    pens[0].ffg("O").mod_contour(0, lambda c: c.translate(0, -80*tom.ease()))
 
     ### BRANDING
     fp = f.a.prg(f.i, easefn="linear").e
