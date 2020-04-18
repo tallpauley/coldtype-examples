@@ -12,7 +12,7 @@ git clone https://github.com/goodhertz/coldtype-examples.git
 cd coldtype-examples
 python3.8 -m venv venv --prompt=coldtype-examples
 source venv/bin/activate
-pip install git+https://github.com/goodhertz/coldtype#egg=coldtype[drawbot]
+pip install git+https://github.com/goodhertz/coldtype#egg=coldtype[drawbot,renderer]
 ```
 
 ## Verifying installation
