@@ -24,7 +24,7 @@ def show_body(glyph, dps):
 
     return [
         DATPenSet([
-            DPR(glyph.body).f(0.5, 0.75, 0.8, 1).s(0, 1).sw(5),
+            DPR(glyph.body).f(hsl(0.4)).s(0, 1).sw(5),
             main.copy().s(0, 1).sw(1),
             box.copy().f(None).s(1, 0, 0.5).sw(5),
             pt_labels.f(0)
