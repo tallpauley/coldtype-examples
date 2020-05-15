@@ -1,9 +1,16 @@
-import math
+#import math
 import numpy as np
 import soundfile as sf
+from coldtype import *
 
+"""
+You'll need to `pip install soundfile` to get this to work
+"""
 
 class Wavfile():
+    """
+    This is not good code, but it is enough code
+    """
     def __init__(self, path, fps=30):
         self.sf, self.sf_fs = sf.read(str(path))
         self.fps = fps
@@ -33,3 +40,11 @@ class Wavfile():
     def amp(self, i):
         return np.average(np.fabs(self.samples_for_frame(i)))
 
+
+audio = Wavfile("animations/media/coldtype.wav")
+obvs = Font("fonts/ColdtypeObviously.designspace")
+
+@animation(duration=audio.framelength, storyboard=[13])
+def render(f):
+    amp = audio.amp(f.i)
+    return StyledString("COLDTYPE", Style(obvs, 700, tu=-50+150*(0.2+pow(amp,2)*5), r=1, ro=1, rotate=5+10*amp, wdth=0)).pens().align(f.a.r).f(hsl(0.9, l=0.7)).s(0).sw(5)
